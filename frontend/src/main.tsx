@@ -4,11 +4,15 @@ import './index.css'
 // import App from './App.tsx'
 import AppRoutes from './AppRoutes.tsx'
 import { BrowserRouter} from 'react-router-dom'
+import Auth0ProviderWithNavigate from './auth/Auth0ProviderWithNavigate.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <AppRoutes />
+    <Auth0ProviderWithNavigate>
+    <AppRoutes />
+
+    </Auth0ProviderWithNavigate>
     </BrowserRouter>
   </StrictMode>,
 )
