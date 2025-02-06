@@ -6,7 +6,7 @@ import MyUserController from '../controller/MyUserController'
 router.post("/", MyUserController.createUser);
 router.get("/users", MyUserController.getUsers);
 router.get("/:auth0Id", MyUserController.getUserById);
-router.put("/updateUser", MyUserController.updateUser);
+router.put("/:auth0Id", MyUserController.updateUser);
 router.delete("/:auth0Id", MyUserController.deleteUser);
 
 export default router;
