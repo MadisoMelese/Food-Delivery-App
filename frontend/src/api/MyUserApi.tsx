@@ -21,8 +21,17 @@ export const useCreateMyUser = () => {
     }
     // return await response.json();
   }
-  const { mutateAsync: createUser, isLoading, isError, isSuccess } = useMutation(createMyUserRequest)
+  const { mutateAsync: 
+    createUser, 
+    isLoading, 
+    isError, 
+    isSuccess } = useMutation(createMyUserRequest)
 
-  return { createUser, isLoading, isError, isSuccess };
+  return { 
+    createUser, 
+    isLoading, 
+    isError, 
+    isSuccess 
+  };
 }
 
