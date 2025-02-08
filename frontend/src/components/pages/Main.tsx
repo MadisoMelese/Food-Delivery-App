@@ -13,7 +13,8 @@ const Main = () => {
       {isAuthenticated ? (<UsernameMenu />):(    <Button
     onClick={handleLogin}
     variant="ghost"
-    className="font-bold hover:text-orange-500 hover:bg-white"
+    className="font-bold hover:text-orange-500 hover:bg-white 
+    text-lg"
     >
       Log In
     </Button>)}
