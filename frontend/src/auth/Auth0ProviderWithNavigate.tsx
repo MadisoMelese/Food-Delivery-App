@@ -1,5 +1,4 @@
-// import { useCreateMyUser } from "@/api/MyUserApi";
-import {  Auth0Provider } from "@auth0/auth0-react";
+import { Auth0Provider } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 type Props = {
   children: React.ReactNode;
@@ -12,25 +11,25 @@ const Auth0ProviderWithNavigate = ({ children }: Props) => {
   const audience = import.meta.env.VITE_AUTH0_AUDIENCE;
 
   if (!domain || !clientId || !redirectUri || !audience) {
-    throw new Error("unable to connect")
+    throw new Error("unable to connect");
   }
   const onRedirectCallback = () => {
-    navigate("/auth-callback")
-    // console.log("User Redirect", user)
-  }
+    navigate("/auth-callback");
+    // console.log("User Redirect", user);
+  };
   return (
     <Auth0Provider
       domain={domain}
       clientId={clientId}
       authorizationParams={{
         redirect_uri: redirectUri,
-        audience:audience, //i don't know what is going
+        audience:audience, // Audience parameter for API access
       }}
       onRedirectCallback={onRedirectCallback}
     >
       {children}
     </Auth0Provider>
-  )
-}
+  );
+};
 
-export default Auth0ProviderWithNavigate
+export default Auth0ProviderWithNavigate;

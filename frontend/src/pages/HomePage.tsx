@@ -18,7 +18,7 @@ const HomePage = () => {
         Download the FoodEats App for faster ordering and personilised recommendations
         </span>
 
-        <img src={playStore} alt="Play store Or App Store " />
+        <img src={playStore} alt="Play store Or App Store " className='cursor-pointer'/>
         </div>
         </div>
       </div>
