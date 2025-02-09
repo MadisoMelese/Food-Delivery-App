@@ -23,7 +23,7 @@ const Auth0ProviderWithNavigate = ({ children }: Props) => {
       clientId={clientId}
       authorizationParams={{
         redirect_uri: redirectUri,
-        audience:audience, // Audience parameter for API access
+        audience, // Audience parameter for API access
       }}
       onRedirectCallback={onRedirectCallback}
     >
